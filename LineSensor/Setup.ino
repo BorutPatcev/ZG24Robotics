@@ -1,11 +1,6 @@
-#define ENABLE_PIN 33
-#define S0 1
-#define S1 2
-#define S2 3
-
 void Setup() {
   Master.begin(115200);
-  
+  SetupLineSensors();
 }
 
 void SetupLineSensors() {

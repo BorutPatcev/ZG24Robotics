@@ -1,5 +1,6 @@
 void ReadLineSensors() {
 
+  digitalWrite(ENABLE_PIN, ENABLED);
   int counter = 0;
 
   for (int i = 0; i < 2; i++) {
@@ -41,6 +42,7 @@ void ReadLineSensors() {
 }
 
 void ReadLinePosition() {
+  ReadLineSensors();
   bool LinePosition[9] = {0,0,0,0,0,0,0,0,0};
   for (int i = 0; i < 10; i++) {  // Left Outside
     if (LineSensor[LeftOutside[i]]) LinePosition[0] = 1;
